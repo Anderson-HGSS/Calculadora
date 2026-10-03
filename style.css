@@ -1,0 +1,30 @@
+input {
+    text-align: end;
+}
+
+#botoes {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 8px;
+}
+
+#botoes button {
+    padding: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#botoes button:hover{
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+main {
+    width: 500px;
+    background-color: #b3b3b3;
+    padding: 20px;
+    border-radius: 20px;
+}
