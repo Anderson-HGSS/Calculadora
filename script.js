@@ -117,30 +117,35 @@ btnDiv.addEventListener("click", function(){
 
 
 function calcular(){
-    
-    const numAnterior = Number(valorAnterior);
-    const numAtual = Number(valorAtual);
 
-    let resultado;
+    if(valorAnterior !== ""){
 
-    if(operacao === "+"){
-        resultado = numAnterior + numAtual;
-    }
-    else if(operacao === "-"){
-        resultado = numAnterior - numAtual;
-    }
-    else if(operacao === "*"){
-        resultado = numAnterior * numAtual;
-    }
-    else if(operacao === "/"){
-        resultado = numAnterior / numAtual;
-    }
+        const numAnterior = Number(valorAnterior);
+        const numAtual = Number(valorAtual);
 
-    valorAtual = String(resultado);
-    valorAnterior = "";
-    operacao = null;
+        let resultado;
 
-    atualizaDisplay();
+        if(operacao === "+"){
+            resultado = numAnterior + numAtual;
+        }
+        else if(operacao === "-"){
+            resultado = numAnterior - numAtual;
+        }
+        else if(operacao === "*"){
+            resultado = numAnterior * numAtual;
+        }
+        else if(operacao === "/"){
+            resultado = numAnterior / numAtual;
+        }
+
+        valorAtual = String(resultado);
+        valorAnterior = "";
+        operacao = null;
+
+        atualizaDisplay();
+    }else{
+        atualizaDisplay();
+    }
 }
 
 btnIgual.addEventListener("click", calcular);

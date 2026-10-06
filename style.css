@@ -39,6 +39,7 @@ main {
     background-color: #b3b3b3;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: black 2px 2px 10px;
 }
 
 #display{
@@ -46,6 +47,11 @@ main {
     height: 30px;
     font-size: 20px;
     width: 475px;
+}
+
+#display::selection{
+    background-color: rgb(57, 57, 255);
+    color: white;
 }
 
 body{
@@ -58,4 +64,5 @@ body{
 
 header{
     font-size: 30px;
+    text-shadow: black 2px 2px 3px;
 }
