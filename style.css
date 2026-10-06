@@ -15,11 +15,21 @@ input {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 10px;
+    border: #5e5e5e solid 1px;
+    font-size: larger;
 }
 
 #botoes button:hover{
     background-color: #5e5e5e;
     color: #fff;
+}
+
+#botoes #btnIgual:hover{
+    background-color: #1681fa;
+}
+
+#botoes #btnC:hover{
+    background-color: #fa3116;
 }
 
 main {

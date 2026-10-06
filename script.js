@@ -19,7 +19,7 @@ const btnC = document.getElementById("btnC");
 const btnIgual = document.getElementById("btnIgual");
 
 let valorAtual = "";
-let vaalorAnterior = "";
+let valorAnterior = "";
 let operacao = null;
 
 function atualizaDisplay(){
@@ -38,6 +38,112 @@ function escreveDisplay(numero){
 
 }
 
+btnC.addEventListener("click", function(){
+    valorAtual = "";
+    valorAnterior = "";
+    operacao = null;
+    atualizaDisplay();
+    
+});
+
 btn9.addEventListener("click", function(){
     escreveDisplay("9");
+});
+
+btn8.addEventListener("click", function(){
+    escreveDisplay("8");
+});
+
+btn7.addEventListener("click", function(){
+    escreveDisplay("7");
+});
+
+btn6.addEventListener("click", function(){
+    escreveDisplay("6");
+});
+
+btn5.addEventListener("click", function(){
+    escreveDisplay("5");
+});
+
+btn4.addEventListener("click", function(){
+    escreveDisplay("4");
+});
+
+btn3.addEventListener("click", function(){
+    escreveDisplay("3");
+});
+
+btn2.addEventListener("click", function(){
+    escreveDisplay("2");
+});
+
+btn1.addEventListener("click", function(){
+    escreveDisplay("1");
+});
+
+btn0.addEventListener("click", function(){
+    escreveDisplay("0");
+});
+
+function selecionarOperacao(op){
+
+    if(valorAtual === ""){
+        return;
+    }
+
+    valorAnterior = valorAtual;
+    operacao = op;
+    valorAtual = "";
+}
+
+
+btnSoma.addEventListener("click", function(){
+    selecionarOperacao("+");
+});
+
+btnSub.addEventListener("click", function(){
+    selecionarOperacao("-")
 })
+
+
+btnMult.addEventListener("click", function(){
+    selecionarOperacao("*")
+})
+
+btnDiv.addEventListener("click", function(){
+    selecionarOperacao("/")
+})
+
+
+function calcular(){
+    
+    const numAnterior = Number(valorAnterior);
+    const numAtual = Number(valorAtual);
+
+    let resultado;
+
+    if(operacao === "+"){
+        resultado = numAnterior + numAtual;   
+    }
+    else if(operacao === "-"){
+        resultado = numAnterior - numAtual;   
+    }
+    else if(operacao === "*"){
+        resultado = numAnterior * numAtual;   
+    }
+    else if(operacao === "/"){
+        resultado = numAnterior / numAtual;   
+    }
+
+    valorAtual = String(resultado);
+    valorAnterior = "";
+    operacao = null;
+
+    atualizaDisplay();
+}
+
+btnIgual.addEventListener("click", calcular);
+btnSub.addEventListener("click", calcular);
+btnMult.addEventListener("click", calcular);
+btnDiv.addEventListener("click", calcular);
