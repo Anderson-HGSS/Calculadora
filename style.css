@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Medula+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 input {
     text-align: end;
 }
@@ -46,6 +48,14 @@ main {
     width: 475px;
 }
 
-main{
-    text-align: end;
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+}
+
+header{
+    font-size: 30px;
 }
