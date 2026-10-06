@@ -124,16 +124,16 @@ function calcular(){
     let resultado;
 
     if(operacao === "+"){
-        resultado = numAnterior + numAtual;   
+        resultado = numAnterior + numAtual;
     }
     else if(operacao === "-"){
-        resultado = numAnterior - numAtual;   
+        resultado = numAnterior - numAtual;
     }
     else if(operacao === "*"){
-        resultado = numAnterior * numAtual;   
+        resultado = numAnterior * numAtual;
     }
     else if(operacao === "/"){
-        resultado = numAnterior / numAtual;   
+        resultado = numAnterior / numAtual;
     }
 
     valorAtual = String(resultado);
@@ -144,6 +144,3 @@ function calcular(){
 }
 
 btnIgual.addEventListener("click", calcular);
-btnSub.addEventListener("click", calcular);
-btnMult.addEventListener("click", calcular);
-btnDiv.addEventListener("click", calcular);
