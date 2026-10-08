@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Medula+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Medula+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&display=swap');
+@import url('https://googleapis.com');
+
+:root {
+    --bg-color: #0d0e15;
+    --calc-bg: #16192b;
+    --neon-cyan: #00f0ff;
+    --neon-magenta: #ff007f;
+    --text-color: #e2e8f0;
+}
 
 input {
     text-align: end;
@@ -17,52 +26,77 @@ input {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 10px;
-    border: #5e5e5e solid 1px;
+    border: var(--bg-color) solid 1px;
     font-size: larger;
+    color: var(--text-color);
 }
 
-#botoes button:hover{
-    background-color: #5e5e5e;
+#botoes button:hover {
+    background-color: var(--bg-color);
     color: #fff;
+    box-shadow: var(--bg-color) 0px 0px 100px;
+    
 }
 
-#botoes #btnIgual:hover{
-    background-color: #1681fa;
+#botoes #btnIgual {
+    border: var(--neon-cyan) solid 1px;
 }
 
-#botoes #btnC:hover{
-    background-color: #fa3116;
+#botoes #btnIgual:hover {
+    background-color: var(--neon-cyan);
+    box-shadow: var(--neon-cyan) 0px 0px 100px;
+    
+}
+
+#botoes #btnC {
+    border: var(--neon-magenta) solid 1px;
+}
+
+#botoes #btnC:hover {
+    background-color: var(--neon-magenta);
+    box-shadow: var(--neon-magenta) 0px 0px 100px;
+    border: var(--neon-magenta) solid 1px;
 }
 
 main {
     width: 500px;
-    background-color: #b3b3b3;
+    background-color: var(--calc-bg);
     padding: 20px;
     border-radius: 20px;
-    box-shadow: black 2px 2px 10px;
+    border: var(--neon-cyan) solid 2px;
+    box-shadow: var(--neon-cyan) 0px 0px 30px;
 }
 
-#display{
+#display {
     margin: 10px;
     height: 30px;
     font-size: 20px;
     width: 475px;
+    border: solid 1px var(--neon-magenta);
+    box-shadow: var(--neon-magenta) 0px 0px 10px;
+    border-radius: 10px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-#display::selection{
-    background-color: rgb(57, 57, 255);
-    color: white;
+#display::selection {
+    background-color: var(--neon-magenta);
+    color: var(--text-color);
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-family: "Nunito", sans-serif;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--bg-color);
 }
 
-header{
+header {
     font-size: 30px;
-    text-shadow: black 2px 2px 3px;
+    color: var(--neon-magenta);
+    text-shadow: 1px -4px 0px var(--neon-cyan) ;
 }
