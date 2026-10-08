@@ -9,6 +9,12 @@
     --text-color: #e2e8f0;
 }
 
+*{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 input {
     text-align: end;
 }
@@ -89,9 +95,6 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     background-color: var(--bg-color);
 }
 
